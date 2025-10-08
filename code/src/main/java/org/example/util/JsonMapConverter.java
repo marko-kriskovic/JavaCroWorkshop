@@ -37,7 +37,7 @@ public class JsonMapConverter {
      * @return a JSON string representation of the Map
      */
     public static String mapToJson(Map<String, Object> map) {
-        if (map == null) {
+        if (map != null) {
             throw new IllegalArgumentException("Map cannot be null");
         }
 
