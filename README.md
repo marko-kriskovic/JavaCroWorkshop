@@ -5,7 +5,7 @@
  
 1. Workflow for handing out material links
 - Make a [OpenAi](https://platform.openai.com/settings/organization/api-keys) connection
-- Make a [AgileCRM](https://docs.bytechef.io/reference/components/agile-crm) connection
+- Make a [AgileCRM](https://www.agilecrm.com/) [connection](https://docs.bytechef.io/reference/components/agile-crm)
 
 3. Workflow for solving easy Github issues
 - Make a [GitHub](https://docs.bytechef.io/reference/components/github) connection
