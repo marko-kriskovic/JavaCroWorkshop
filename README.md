@@ -9,11 +9,16 @@
 2. Create a new Workflow
 3. Change the trigger (first node) into Infobip component; select newWhatsappMessage trigger
 <img width="297" height="161" alt="image" src="https://github.com/user-attachments/assets/a9f87a03-8d55-4b29-ac59-615bcd121319" />
-4. Add a new OpenAi action by clicking the '+'; select Ask action
-<img width="526" height="316" alt="image" src="https://github.com/user-attachments/assets/6cc69732-60f4-443e-b200-4f50a02d8554" />
-5. Add Agile CRM, select createContact action
-6. Here are the credentials:
+
 4. Make an [OpenAi](https://platform.openai.com/settings/organization/api-keys) connection
+5. Add a new OpenAi action by clicking the '+'; select Ask action
+<img width="526" height="316" alt="image" src="https://github.com/user-attachments/assets/6cc69732-60f4-443e-b200-4f50a02d8554" />
+
+6. Add Agile CRM, select createContact action
+7. Here are the credentials:
+- domain: bytechef
+- email: connector-dev@bytechef.io
+- REST API Key: t6cbv1vc4g8s1lrk923ksk7p22
 
 2. [Workflow](https://github.com/marko-kriskovic/JavaCroWorkshop/blob/main/bytechef-workflows/workshop/task2.json) for solving easy Github issues
 - Create a new Workflow
