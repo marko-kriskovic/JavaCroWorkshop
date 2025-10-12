@@ -1,10 +1,10 @@
 # Java Cro Workshop
 
 0. Important links:
-- [Bytechef instance](https://demo.bytechef.io/)
+- [Bytechef instance](https://app.bytechef.io/)
  
 1. Workflow for handing out material links
-- Make a [OpenAi](https://platform.openai.com/settings/organization/api-keys) connection
+- Make a [OpenAi connection](https://platform.openai.com/settings/organization/api-keys)
 
-3. Workflow for solving easy Github issues
+2. Workflow for solving easy Github issues
 - Make a [GitHub](https://docs.bytechef.io/reference/components/github) connection
