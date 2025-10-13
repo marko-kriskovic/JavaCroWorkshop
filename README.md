@@ -23,9 +23,11 @@
 9. Fill in all the Properties:
   
  a. Simulate an output instead of the connection (click the Upload Sample Output Data and paste [this](https://github.com/marko-kriskovic/JavaCroWorkshop/blob/main/bytechef-workflows/output/infobip.json))
+ 
 <img width="520" height="530" alt="image" src="https://github.com/user-attachments/assets/f01cc193-ae0f-4995-89e6-7a95433f350e" />
 
  b. Create an input instead of the connection
+ 
 <img width="273" height="278" alt="image" src="https://github.com/user-attachments/assets/277d01aa-2e86-462b-8fad-934fe74d0eaf" />
 
 10. Publish the Project
