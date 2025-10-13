@@ -26,6 +26,7 @@
 
 11. Deploy it
 <img width="187" height="236" alt="image" src="https://github.com/user-attachments/assets/5653c71a-1895-4d93-99cd-2a8f98d9b5b7" />
+<img width="501" height="257" alt="image" src="https://github.com/user-attachments/assets/c6138e57-89e6-4804-8822-3267923563dd" />
 
 
 ## [Workflow](https://github.com/marko-kriskovic/JavaCroWorkshop/blob/main/bytechef-workflows/workshop/task2.json) for solving easy Github issues
