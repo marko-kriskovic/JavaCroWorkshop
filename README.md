@@ -21,6 +21,12 @@
 - REST API Key: t6cbv1vc4g8s1lrk923ksk7p22
 8. Add a new Logger component; Info action
 9. Fill in all the Properties
+ a. Simulate an output instead of the connection (click the Upload Sample Output Data and paste this)
+<img width="520" height="530" alt="image" src="https://github.com/user-attachments/assets/f01cc193-ae0f-4995-89e6-7a95433f350e" />
+
+ b. Create an input instead of the connection
+<img width="273" height="278" alt="image" src="https://github.com/user-attachments/assets/277d01aa-2e86-462b-8fad-934fe74d0eaf" />
+
 10. Publish the Project
 <img width="565" height="303" alt="image" src="https://github.com/user-attachments/assets/6f71812d-c1b9-4438-8eff-1dd9761c9368" />
 
