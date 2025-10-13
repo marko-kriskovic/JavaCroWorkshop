@@ -8,12 +8,12 @@
 1. Create a new Project
 2. Create a new Workflow
 3. Change the trigger (first node) into Infobip component; select newWhatsappMessage trigger
+4. Add a new OpenAi action by clicking the '+'; select Ask action
 <img width="297" height="161" alt="image" src="https://github.com/user-attachments/assets/a9f87a03-8d55-4b29-ac59-615bcd121319" />
 
-4. Make an [OpenAi](https://platform.openai.com/settings/organization/api-keys) connection
+5. Make an [OpenAi](https://platform.openai.com/settings/organization/api-keys) connection
 <img width="526" height="316" alt="image" src="https://github.com/user-attachments/assets/6cc69732-60f4-443e-b200-4f50a02d8554" />
 
-5. Add a new OpenAi action by clicking the '+'; select Ask action
 6. Add Agile CRM, select createContact action
 7. Here are the credentials:
 - domain: bytechef
