@@ -1,0 +1,26 @@
+{
+  "results": [
+    {
+      "from": "123456789",
+      "to": "385916039814",
+      "integrationType": "WHATSAPP",
+      "receivedAt": "2025-10-06T14:17:37.000+0000",
+      "messageId": "E_qWsP6cvPD--1ALNWHw_qGZ6dtazFpsv4fJUU2aOZTlckyQZ3mwchtgTyYY0CeTZOLZo0IiEsjPHrcgFdBuYgsDriluymuo_rqMptKrpkmNc",
+      "pairedMessageId": null,
+      "callbackData": null,
+      "message": {
+        "text": "hi",
+        "type": "TEXT"
+      },
+      "contact": {
+        "name": "Test"
+      },
+      "price": {
+        "pricePerMessage": 0,
+        "currency": "EUR"
+      }
+    }
+  ],
+  "messageCount": 1,
+  "pendingMessageCount": 0
+}
