@@ -8,5 +8,3 @@
 
 3. Workflow for solving easy Github issues
 - Make a [GitHub](https://docs.bytechef.io/reference/components/github) connection
-
-Hello Java Cro
