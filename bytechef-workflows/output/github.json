@@ -1,4 +1,7 @@
 {
   "action": "opened",
-  "number": 21
+  "number": 2,
+  "pull_request": {
+    "url": "https://api.github.com/repos/connectorDevBytechef/JavaCroWorkshop/pulls/2"
+  }
 }
