@@ -1,0 +1,84 @@
+{
+  "label" : "task 1",
+  "description" : "whatsapp bot",
+  "inputs" : [ {
+    "name" : "poruka",
+    "label" : "poruka",
+    "type" : "string"
+  } ],
+  "triggers" : [ {
+    "label" : "Infobip",
+    "name" : "trigger_1",
+    "parameters" : {
+      "number" : "385916039814"
+    },
+    "type" : "infobip/v1/newWhatsappMessage",
+    "metadata" : {
+      "ui" : {
+        "dynamicPropertyTypes" : {
+          "number" : "STRING"
+        }
+      }
+    }
+  } ],
+  "tasks" : [ {
+    "label" : "OpenAI",
+    "name" : "openAi_1",
+    "parameters" : {
+      "format" : "SIMPLE",
+      "response" : {
+        "responseFormat" : "JSON",
+        "responseSchema" : "{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"ime\":{\"type\":\"string\",\"title\":\"ime\"},\"prezime\":{\"type\":\"string\",\"title\":\"prezime\"},\"email\":{\"type\":\"string\",\"title\":\"email\"}},\"required\":[],\"type\":\"object\",\"title\":\"rezultat\"}"
+      },
+      "n" : 1,
+      "temperature" : 1,
+      "topP" : 1,
+      "frequencyPenalty" : 0,
+      "presencePenalty" : 0,
+      "model" : "gpt-4.1-nano",
+      "systemPrompt" : "Analiziraj poruku i pokušaj razdvojiti informacije u različite kategorije. Ako kategorija ne postoji, vrati prazan string",
+      "userPrompt" : "Message: ${trigger_1.message}"
+    },
+    "type" : "openAi/v1/ask",
+    "metadata" : {
+      "ui" : {
+        "dynamicPropertyTypes" : {
+          "systemPrompt" : "STRING",
+          "userPrompt" : "STRING"
+        }
+      }
+    }
+  }, {
+    "label" : "Agile CRM",
+    "name" : "agileCrm_1",
+    "parameters" : {
+      "first_name" : "${openAi_1.ime}",
+      "last_name" : "${openAi_1.prezime}",
+      "email" : "${openAi_1.email}"
+    },
+    "type" : "agileCrm/v1/createContact",
+    "metadata" : {
+      "ui" : {
+        "dynamicPropertyTypes" : {
+          "first_name" : "STRING",
+          "last_name" : "STRING",
+          "email" : "STRING"
+        }
+      }
+    }
+  }, {
+    "label" : "Logger",
+    "name" : "logger_1",
+    "parameters" : {
+      "text" : "Broj na koji šaljemo: ${trigger_1.number}. Ime osobe: ${openAi_1.ime}; email osobe: ${agileCrm_1.owner.email}"
+    },
+    "type" : "logger/v1/info",
+    "metadata" : {
+      "ui" : {
+        "dynamicPropertyTypes" : {
+          "text" : "STRING"
+        }
+      }
+    }
+  } ]
+}

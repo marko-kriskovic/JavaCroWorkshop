@@ -1,0 +1,100 @@
+{
+  "label" : "DEMO 1",
+  "description" : "",
+  "inputs" : [ ],
+  "triggers" : [ {
+    "label" : "Infobip",
+    "name" : "trigger_1",
+    "parameters" : {
+      "number" : "385916039814"
+    },
+    "type" : "infobip/v1/newWhatsappMessage",
+    "metadata" : {
+      "ui" : {
+        "dynamicPropertyTypes" : {
+          "number" : "STRING"
+        }
+      }
+    }
+  } ],
+  "tasks" : [ {
+    "label" : "OpenAI",
+    "name" : "openAi_1",
+    "parameters" : {
+      "format" : "SIMPLE",
+      "response" : {
+        "responseFormat" : "JSON",
+        "responseSchema" : "{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"email\":{\"type\":\"string\",\"title\":\"Email\"},\"name\":{\"type\":\"string\",\"title\":\"Name\"},\"surname\":{\"type\":\"string\",\"title\":\"Last Name\"},\"country\":{\"type\":\"string\",\"title\":\"Country\"},\"website\":{\"type\":\"string\",\"title\":\"Website\"},\"city\":{\"type\":\"string\",\"title\":\"City\"},\"address\":{\"type\":\"string\",\"title\":\"Address\"},\"company\":{\"type\":\"string\",\"title\":\"Company\"},\"zip\":{\"type\":\"string\",\"title\":\"ZIP code\"}},\"required\":[],\"type\":\"object\",\"title\":\"Contact\"}"
+      },
+      "n" : 1,
+      "temperature" : 1,
+      "topP" : 1,
+      "frequencyPenalty" : 0,
+      "presencePenalty" : 0,
+      "model" : "gpt-4.1",
+      "systemPrompt" : "Separate the given message into categories. If a category isn't fulfilled return an empty string for that category.",
+      "userPrompt" : "Contact Name: ${trigger_1.results[0].contact.name}; Message:${trigger_1.results[0].message.text}"
+    },
+    "type" : "openAi/v1/ask",
+    "metadata" : {
+      "ui" : {
+        "dynamicPropertyTypes" : {
+          "userPrompt" : "STRING",
+          "systemPrompt" : "STRING"
+        }
+      }
+    }
+  }, {
+    "label" : "Agile CRM",
+    "name" : "agileCrm_1",
+    "parameters" : {
+      "phone" : "${trigger_1.results[0].from}",
+      "tags" : [ ],
+      "last_name" : "${openAi_1.surname}",
+      "email" : "${openAi_1.email}",
+      "country" : "${openAi_1.country}",
+      "website" : "${openAi_1.website}",
+      "first_name" : "${openAi_1.name}",
+      "address" : "${openAi_1.address}",
+      "city" : "${openAi_1.city}",
+      "zip_code" : "${openAi_1.zip}",
+      "company" : "${openAi_1.company}"
+    },
+    "type" : "agileCrm/v1/createContact",
+    "metadata" : {
+      "ui" : {
+        "dynamicPropertyTypes" : {
+          "first_name" : "STRING",
+          "phone" : "STRING",
+          "tags[0]" : "STRING",
+          "last_name" : "STRING",
+          "email" : "STRING",
+          "country" : "STRING",
+          "website" : "STRING",
+          "address" : "STRING",
+          "city" : "STRING",
+          "zip_code" : "STRING",
+          "company" : "STRING"
+        }
+      }
+    }
+  }, {
+    "label" : "Infobip",
+    "name" : "infobip_1",
+    "parameters" : {
+      "from" : "${trigger_1.results[0].to}",
+      "to" : "${trigger_1.results[0].from}",
+      "text" : "Hi ${openAi_1.name}! Nice to meet you! These are the materials for Java Cro: https://github.com/marko-kriskovic/JavaCroWorkshop/blob/main/README.md"
+    },
+    "type" : "infobip/v1/sendWhatsappTextMessage",
+    "metadata" : {
+      "ui" : {
+        "dynamicPropertyTypes" : {
+          "from" : "STRING",
+          "to" : "STRING",
+          "text" : "STRING"
+        }
+      }
+    }
+  } ]
+}
