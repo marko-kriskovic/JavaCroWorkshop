@@ -54,3 +54,8 @@
 7. Fill in all the Properties
 8. Publish the Project
 9. Deploy it
+10. On your fork, create a new branch, edit this README.md, commit it and make a pull request on your fork main.
+
+    - without body
+   
+    - with body
