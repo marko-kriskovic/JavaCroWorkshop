@@ -15,12 +15,8 @@
 <img width="526" height="316" alt="image" src="https://github.com/user-attachments/assets/6cc69732-60f4-443e-b200-4f50a02d8554" />
 
 6. Add Agile CRM, select createContact action
-7. Here are the credentials:
-- domain: bytechef
-- email: connector-dev@bytechef.io
-- REST API Key: t6cbv1vc4g8s1lrk923ksk7p22
-8. Add a new Logger component; Info action
-9. Fill in all the Properties:
+7. Add a new Logger component; Info action
+8. Fill in all the Properties:
   
  a. Simulate an output instead of the connection (click the Upload Sample Output Data and paste [this](https://github.com/marko-kriskovic/JavaCroWorkshop/blob/main/bytechef-workflows/output/infobip.json))
  
@@ -30,14 +26,14 @@
  
 <img width="273" height="278" alt="image" src="https://github.com/user-attachments/assets/277d01aa-2e86-462b-8fad-934fe74d0eaf" />
 
-10. Publish the Project
+9. Publish the Project
 <img width="565" height="303" alt="image" src="https://github.com/user-attachments/assets/6f71812d-c1b9-4438-8eff-1dd9761c9368" />
 
-11. Deploy it
+10. Deploy it
 <img width="187" height="236" alt="image" src="https://github.com/user-attachments/assets/5653c71a-1895-4d93-99cd-2a8f98d9b5b7" />
 <img width="501" height="257" alt="image" src="https://github.com/user-attachments/assets/c6138e57-89e6-4804-8822-3267923563dd" />
 
-12. Run the workflow
+11. Run the workflow
 <img width="409" height="225" alt="image" src="https://github.com/user-attachments/assets/15372620-6cd5-4474-aa32-dfd16ffed678" />
 
 ## [Workflow](https://github.com/marko-kriskovic/JavaCroWorkshop/blob/main/bytechef-workflows/workshop/task2.json) for solving easy Github issues
